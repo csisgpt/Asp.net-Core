@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../InsuranceSuite.Domain/InsuranceSuite.Domain.csproj" />
+    <ProjectReference Include="../InsuranceSuite.Application/InsuranceSuite.Application.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.5.24306.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0-preview.5.24306.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0-preview.5.24306.11" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="3.1.0" />
+  </ItemGroup>
+  <PropertyGroup>
+    <RootNamespace>InsuranceSuite.Infrastructure</RootNamespace>
+  </PropertyGroup>
+</Project>

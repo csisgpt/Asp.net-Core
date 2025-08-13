@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../InsuranceSuite.Api/InsuranceSuite.Api.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.5.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.0-preview.5.24306.4" />
+    <PackageReference Include="Respawn" Version="7.0.0" />
+    <PackageReference Include="Testcontainers" Version="3.7.0" />
+  </ItemGroup>
+  <PropertyGroup>
+    <RootNamespace>InsuranceSuite.Tests.Integration</RootNamespace>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+</Project>
