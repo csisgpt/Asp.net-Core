@@ -32,6 +32,14 @@ public class PreRegistration
         Status = RegistrationStatus.Draft;
     }
 
+    public void Update(Guid contractId, Guid subContractId, Guid? healthPlanId, string category)
+    {
+        ContractId = contractId;
+        SubContractId = subContractId;
+        HealthPlanId = healthPlanId;
+        Category = category;
+    }
+
     public void Submit()
     {
         if (Status != RegistrationStatus.Draft)

@@ -18,6 +18,21 @@ public class Repository<T> : IRepository<T> where T : class
     public async Task<T?> GetByIdAsync(Guid id, CancellationToken cancellationToken)
         => await _set.FindAsync(new object?[] { id }, cancellationToken);
 
+    public async Task<List<T>> GetAllAsync(CancellationToken cancellationToken)
+        => await _set.ToListAsync(cancellationToken);
+
     public async Task AddAsync(T entity, CancellationToken cancellationToken)
         => await _set.AddAsync(entity, cancellationToken);
+
+    public Task UpdateAsync(T entity, CancellationToken cancellationToken)
+    {
+        _set.Update(entity);
+        return Task.CompletedTask;
+    }
+
+    public Task DeleteAsync(T entity, CancellationToken cancellationToken)
+    {
+        _set.Remove(entity);
+        return Task.CompletedTask;
+    }
 }
